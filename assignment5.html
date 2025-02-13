@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .pic{
+                display: flex;
+            }
+            .submain{
+                margin-left: 100px;
+                height:400px;
+                width: 250px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="pic">
+         <div class="submain"> <img src="assets/image/bracelet.webp" height="350px" width="250px"><br>
+            <p>Beautiful Fancy Flower Design Gold Plated Bracelet for Girls/Women</p>
+            <p id="b"> price : $10</p>
+            <p id="i" style="display: none;"> price : 10</p>
+            <input type="number" min="1" placeholder="enter the quantity" id="j">
+            <button onclick="abc()">add to cart</button>
+        </div>
+         <div class="submain"> <img src="assets/image/sunglasses.jpg" height="350px" width="250px">
+            <p>Buy Midnight Polarized Wayfarer Sunglasses - Woggles</p>
+            <p id="g">price : $5</p> 
+            <p id="s" style="display: none;"> price : 5</p>
+            <input type="number" min="1" placeholder="enter the quantity" id="f">
+            <button onclick="op()">add to cart</button>
+        </div>
+         <div class="submain"> <img src="assets/image/perfume.webp" height="350px" width="250px">
+            <p>Secret Passion - By fragrance world</p>
+            <p id="p">price : $20</p>
+            <p id="v" style="display: none;"> price : 20</p>
+            <input type="number" min="1" placeholder="enter the quantity" id="t">
+            <button onclick="ui()">add to cart</button>
+        </div>
+        </div><br><br><br><br><br><br><br><br>
+        <button onclick="kl()" style="margin-left: 500px;">get total bill</button>
+        <h1 id="m"></h1>
+        <p id="n" style="display: none;"></p>
+        <script>
+          function abc(){
+            d=document.getElementById('i').innerHTML="10";
+            z=document.getElementById('b').innerHTML="price : $10";
+            l=document.getElementById('j').value;
+            if(l>0){
+                total=d*l;
+               document.getElementById('n').innerHTML="total price is $"+ total;
+            }
+            }
+          function op(){
+            e=document.getElementById('f').value;
+            x=document.getElementById('g').innerHTML="price : $5";
+            h=document.getElementById('s').innerHTML="5"
+            if(e>0){
+                totaltwo=h*e;
+               document.getElementById('n').innerHTML="total price is $"+ totaltwo;
+            }
+          }
+          function ui(){
+            p=document.getElementById('t').value;
+            c=document.getElementById('p').innerHTML="price : $20";
+            o=document.getElementById('v').innerHTML="20"
+            if(p>0){
+                totalthree=o*p;
+               document.getElementById('n').innerHTML="total price is $"+ totalthree;
+            }
+          }
+            function kl(){
+                d=document.getElementById('i').innerHTML="10";
+                h=document.getElementById('s').innerHTML="5";
+                 o=document.getElementById('v').innerHTML="20";
+                l=document.getElementById('j').value;
+                e=document.getElementById('f').value;
+                p=document.getElementById('t').value;
+            if(l>0){
+                sumone=total;
+                y=document.getElementById('m').innerHTML= "your total bill is $"+sumone;
+            }
+            if(e>0){
+                add=totaltwo;
+                k=document.getElementById('m').innerHTML= "your total bill is $"+add;
+            }
+            if(p>0){
+                sumthree=totalthree;
+                r=document.getElementById('m').innerHTML= "your total bill is $"+sumthree;
+            }
+            if(l!=0&&e!=0){
+                sumfour=total+totaltwo;
+                w=document.getElementById('m').innerHTML= "your total bill is $"+sumfour;
+            }
+            if(l!=0&&p!=0){
+                sumfive=total+totalthree;
+                q=document.getElementById('m').innerHTML= "your total bill is $"+sumfive;
+            }
+            if(e!=0&&p!=0){
+                sumsix=totaltwo+totalthree;
+                a=document.getElementById('m').innerHTML= "your total bill is $"+sumsix;
+            }
+            if(l!=0||e!=0||p!=0){
+                sum=total+totaltwo+totalthree;
+                n=document.getElementById('m').innerHTML= "your total bill is $"+sum;
+            }
+            
+
+            
+          }
+        </script>
+    </body>
+</html>

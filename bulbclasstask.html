@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <img id="main" src="assets/image/offb.jpg" height="400px">
+        <button onclick="abc()">click</button>
+        
+    </body>
+    <script>
+        function abc(){
+           x= document.getElementById("main");
+           y=x.getAttribute('src');
+         if(y=="assets/image/offb.jpg"){
+            x.setAttribute('src','assets/image/onb.jpg');
+         }
+         else{
+            x.setAttribute('src','assets/image/offb.jpg');
+         }
+        }
+    </script>
+</html>

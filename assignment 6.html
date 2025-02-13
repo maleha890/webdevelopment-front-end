@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 style="text-align: center;">AGREGRATE CALCULATOR</h1>
+        <label id="p">enter your matric marks out of 1100:</label>
+        <input type="number" id="l"><br><br>
+        <label id="h">enter your inter marks out of 1100:</label>
+        <input type="number" id="z"><br><br>
+        <label id="t">enter your E-cat marks out of 400:</label>
+        <input type="number" id="x"><br><br>
+        <button onclick="xyz()">calculate</button>
+        <h1 id="m"></h1>
+        <h1 id="n"></h1>
+        <script>
+        function xyz(){
+            q=document.getElementById('l').value;
+            k=document.getElementById('z').value;
+            y=document.getElementById('x').value;
+            aggregate= ((q/1100* 0.17) + (k/1100 *0.5)+ (y/400*0.33))*100;
+            document.getElementById('m').innerHTML = " Your total aggregate is " + aggregate;
+            if (aggregate < 70)
+         document.getElementById('n').innerHTML = "NO Admission!  Work Hard  For the Next Time.";
+         if (aggregate >= 70)
+         document.getElementById('n').innerHTML = "   You are able to apply in Computer Science Department";
+         if (aggregate >= 80)
+         document.getElementById('n').innerHTML = "   You are able to apply in  Chemical or Mechanical Engineering Deparment";
+         if (aggregate >= 90)
+        document.getElementById('n').innerHTML = " You are able to apply in  Electrical Engineering Department";
+        }
+        </script>
+    </body>
+</html>

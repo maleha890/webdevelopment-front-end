@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>doctor appointment form</h1>
+        <label>name</label>
+        <input type="text" name="n" id="n">
+        <br><br>
+        <label>mode of checkup</label>
+        <select name="m" id="m">
+            <option >select any one</option>
+            <option value="clinic">clinic</option>
+            <option value="home">home</option>
+        </select>
+        <br><br>
+        <button onclick="abc()">book</button>
+        <h1 id="res"></h1>
+    </body>
+    <script>
+        function abc(){
+            n= document.getElementById('n').value;
+            c= document.getElementById('m').value;
+            if (c=="clinic"){
+                document.getElementById('res').innerHTML=n + "Your appointment book!fee is 1000/-";
+            }
+            else{
+                document.getElementById('res').innerHTML=n + "Your appointment book!fee is 2000/-";
+            }
+        }
+    </script>
+</html>

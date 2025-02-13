@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <img class="b" id="one" onclick="abc(id)" src="assets/image/offb.jpg">
+        <img class="b" id="two" onclick="abc(id)" src="assets/image/offb.jpg">
+        <img class="b" id="three" onclick="abc(id)" src="assets/image/offb.jpg">
+        <img class="b" id="four" onclick="abc(id)" src="assets/image/offb.jpg">
+    </body>
+    <script>
+      function abc(x){
+        node=document.querySelectorAll('.b');
+        for(i=0;i<node.length;i++){
+            node[i].src="assets/image/offb.jpg";
+        }
+        document.getElementById(x).setAttribute('src','assets/image/onb.jpg');
+      }
+    </script>
+</html>
